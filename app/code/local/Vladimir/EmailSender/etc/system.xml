@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config>
+	  <sections>
+		<email_cron_sender  translate="label" module="emailsender">                    
+		<label>email_cron_sender</label>
+		<tab>general</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>22</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <email_cron_sender translate="label">
+						  <expanded>1</expanded>
+					  <label>Email_Cron_Sender</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <receiver_email translate="label">
+                            <label>receiver_email</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Put Email Of Receiver</comment>
+                          </receiver_email>
+                          <cron_settings translate="label">
+                            <label>add Cron Settings</label>
+							  <backend_model>vladimir_emailsender/config_cron</backend_model>
+							<frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Put Cron Settings</comment>
+                          </cron_settings>
+					   </fields>
+					   </email_cron_sender>
+					</groups>
+		</email_cron_sender>
+	  </sections>
+</config>

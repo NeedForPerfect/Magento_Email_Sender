@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Vladimir_EmailSender>
+      <version>0.1.0</version>
+    </Vladimir_EmailSender>
+  </modules>
+  <global>
+    <helpers>
+      <emailsender>
+        <class>Vladimir_EmailSender_Helper</class>
+      </emailsender>
+    </helpers>
+	<models>
+	  <emailsender>
+		<class>Vladimir_EmailSender_Model</class>
+		<resourceModel>emailsender_mysql4</resourceModel>
+	  </emailsender>
+        <vladimir_emailsender>
+            <class>Vladimir_EmailSender_Model</class>
+        </vladimir_emailsender>
+	</models>
+  </global>
+    <crontab>
+        <jobs>            
+			<emailsender_sendemailnow>
+                <schedule>
+                    <cron_expr>*/1 * * * *</cron_expr>
+                </schedule>
+                <run><model>emailsender/cron::sendEmailNow</model></run>
+            </emailsender_sendemailnow>
+        </jobs>
+    </crontab>
+</config>

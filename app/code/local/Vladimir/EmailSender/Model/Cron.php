@@ -25,7 +25,7 @@ class Vladimir_EmailSender_Model_Cron{
      'ssl' => 'tls',
      'auth' => 'login',
      'username' => 'realffootball@gmail.com',
-     'password' => 'rfgecnjxrf');
+     'password' => 'herepassword');     // воспользуйтей моим паролем 
 
 $transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
 
